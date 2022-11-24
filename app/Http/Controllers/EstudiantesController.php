@@ -33,7 +33,7 @@ class EstudiantesController extends Controller
     {
        if(request()->hasFile('fotografia')) {
             $imageName = $request->file('fotografia')->getClientOriginalName();
-            $path = base_path() . '/public/estudiantes/';
+            $path = storage_path('app/public/estudiantes');
             $request->file('fotografia')->move($path , $imageName);
         }
         $estudiante = new Estudiante();

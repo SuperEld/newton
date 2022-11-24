@@ -89,7 +89,7 @@
 <body>
   <div class="credencial">
     <img src="{{ public_path('img/fondo.png') }}" class="background">
-    <img src="{{ public_path('estudiantes/' . $estudiante->fotografia) }}" class="picture">
+    <img src="{{ storage_path('app/public/estudiantes/' . $estudiante->fotografia) }}" class="picture">
     <div class="label" id="nombre-label">NOMBRE:</div>
     <div class="text" id="nombre-text">{{ $estudiante->nombre }}</div>
     <div class="label" id="ci-label">C.I:</div>

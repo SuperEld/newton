@@ -148,7 +148,7 @@
             <div class="card text-center">
                 <div class="card-body">
                     <img style="height: 150px; width: 150px; background-color: #EFEFEF; margin: 10px " class="card-img-top rounded-circle mx-auto d-block"
-                         src="estudiantes/{{$estudiante['fotografia']}}">
+                         src="{{ url('storage/estudiantes/' . $estudiante->fotografia) }}">
                     <p class="card-title">APELLIDO: {{ $estudiante['apellido'] }}</p>
                     <p class="card-title">NOMBRE: {{ $estudiante['nombre'] }}</p>
                     <p class="card-text">C.I.: {{ $estudiante['cedula'] }}</p>
