@@ -126,7 +126,7 @@
                                 <option>BIO - 4</option>
                                 <option>ODT - 3</option>
                                 <option>NORMAL - 2</option>
-                                <option>NORMAL - 1</option>
+                                <option>NORMAL - 1 a 3</option>
                             </select>
         </div>
         
