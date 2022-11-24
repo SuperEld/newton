@@ -158,7 +158,7 @@
                     <a href="" title="EDITAR" target="_blank">
                         <span class="glyphicon glyphicon-pencil-black"></span>
                     </a>
-                    <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm"></a>
+                    <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
                 </div>
             </div>
         @endforeach

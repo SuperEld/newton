@@ -1,81 +1,77 @@
 <style>
-.credencial{
-  color: #00b4e1;
-  font-family: 'Source Sans Pro';
-  width: 15cm;
-  height: 24cm;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+*{
+  margin: 0;
+  padding: 0;
+}
+.credencial {
+  width: 216mm;
+  height: 279mm;
+}
+
+.credencial img.background {
+  width: 100%;
+  height: 100%;
   z-index: 0;
-  
 }
 
-body {
-        width: 13cm;
-        height: 21cmh;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        background-image: url({{asset("img/fondo.png")}});
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-.heading .logo, .heading .subtitle, .foto, img, .datos{
+.credencial img.picture {
   position: absolute;
+  top: 300px;
+  left: 80mm;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.heading .logo {
-  letter-spacing: -0.4mm;
-  top: -0.7cm;
-  left: 0.6cm;
-  font-size: 1cm;
+.credencial img.dots {
+  position: absolute;
+  top: 250mm;
+  left: 78mm;
+  width: 200px;
+  height: 48px;
+  z-index: 1;
 }
 
-.datos, .heading .subtitle{
-  list-style: none;
+.label, .text {
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 48px 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.datos{
-  color: #054AA6;
-  bottom: 0.2cm;
-  font-family: cursive;
-  font-size: 0.60cm;
-  font-weight: 600;
-  left: 2cm;
-  top: 13cm;
-  letter-spacing: 0.7mm
-  
+.label {
+  color: #0000FF;
 }
 
-.heading .subtitle{
-  font-size: 2.6mm;
-  left: 2cm;
-  line-height: 3mm;
-  font-weight: 600;
-  color: #009cc3;
-  
+#nombre-label {
+  top: 130mm;
+  left: 0;
 }
-
-img{
-  
-       
-   top: 50%;      
-   transform: translate(-25.5%, -32.2%) scale(0.6);
-  z-index: -1;
+#nombre-text {
+  top: 140mm;
+  left: 0;
 }
-
-
-
-.foto{
-  right: 0.2mm;
-  left: 3.5cm;
-  top: -6cm;
-  background-color: white;
+#ci-label {
+  top: 150mm;
+  left: 0;
 }
-
-.p1{
-  color: #050404;
+#ci-text {
+  top: 160mm;
+  left: 0;
+}
+#grupo-label {
+  top: 170mm;
+  left: 0;
+}
+#grupo-text {
+  top: 180mm;
+  left: 0;
 }
 </style>
 
@@ -86,34 +82,22 @@ img{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="shortcut icon" href="{{ asset('img/nt.ico')}}" />
     <title>IMPRIMIR</title>
 </head>
 
 <body>
-
-<div class="credencial">
-  <div class="body">
-  <div class="datos text-center">
-
-                <div class="">
-                    <img style="height: 400px; width: 400px; background-color: #EFEFEF; margin: 10px; border-width: thick; border-color: black " class=" foto card-img-top rounded-circle mx-auto d-block"
-                         src="">
-                    <p class="">NOMBRE: </p>
-                    <p class="p1"> </p>
-                    <p class="">C.I.:</p>
-                    <p class="p1">}</p>
-                    <p class="">GRUPO: </p>
-                    <p class="p1"></p>
-                </div>  
-  
+  <div class="credencial">
+    <img src="{{ public_path('img/fondo.png') }}" class="background">
+    <img src="{{ public_path('estudiantes/' . $estudiante->fotografia) }}" class="picture">
+    <div class="label" id="nombre-label">NOMBRE:</div>
+    <div class="text" id="nombre-text">{{ $estudiante->nombre }}</div>
+    <div class="label" id="ci-label">C.I:</div>
+    <div class="text" id="ci-text">{{ $estudiante->cedula}}</div>
+    <div class="label" id="grupo-label">GRUPO:</div>
+    <div class="text" id="grupo-text">{{ $estudiante->grupo }}</div>
+    <img src="{{ public_path('img/mensual.png') }}" class="dots">
   </div>
-  <img style="height: 100px;   margin: 10px; top:22cm; left:4.5cm" src="/img/mensual.png" >
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

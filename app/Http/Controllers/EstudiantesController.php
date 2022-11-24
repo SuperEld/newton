@@ -112,17 +112,11 @@ class EstudiantesController extends Controller
 
     public function imprimirPdf($id)
     {
-        $estudiantes = Estudiante::find($id);
-
-        
-        
-        //$estudiantes = Estudiante::select('id','apellido','nombre','cedula','grupo','fotografia')->get();
-        return view('ImprimirEstudiantes')->with('estudiantes',$estudiantes);
-        
-
-        //$pdf = \PDF::loadview('ImprimirEstudiantes');
-        
-        //return $pdf->stream();
+        set_time_limit(0);
+        $estudiante = Estudiante::find($id);
+        //return view('ImprimirEstudiantes')->with('estudiantes',$estudiantes);
+        $pdf = \PDF::loadview('ImprimirEstudiantes', ['estudiante' => $estudiante]);
+        return $pdf->stream();
         //return $pdf->download('ImprimirEstudiante.pdf');
       
     }
