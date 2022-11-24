@@ -98,7 +98,7 @@
             <img src="img/logo.png" width="200"  class="img-responsive" id="avatar">
         </div>
     </div>
-    <form class="form-group" method="POST" action="/guardar-estudiante" enctype="multipart/form-data">
+    <form class="form-group" method="POST" action="guardar-estudiante" enctype="multipart/form-data">
         @csrf
         <div class="col-lg-4 form-group">
             <label for="Apellidos"></label>
