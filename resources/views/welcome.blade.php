@@ -86,9 +86,9 @@
     </div>
 @endif
 <div>
-                <!--<li>
-                    <a class="" href="ListaEstudiantes">LISTADO</a>
-                </li> -->
+                    <!--<a class="" href="ListaEstudiantes">LISTADO</a>-->>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 </div>
 
 

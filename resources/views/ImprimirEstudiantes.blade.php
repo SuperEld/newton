@@ -16,10 +16,10 @@
 
 .credencial img.picture {
   position: absolute;
-  top: 300px;
-  left: 80mm;
-  width: 200px;
-  height: 200px;
+  top: 250px;
+  left: 75mm;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   z-index: 1;
 }
@@ -27,17 +27,17 @@
 .credencial img.dots {
   position: absolute;
   top: 250mm;
-  left: 78mm;
-  width: 200px;
-  height: 48px;
+  left: 40mm;
+  width: 500px;
+  height: 150px;
   z-index: 1;
 }
 
 .label, .text {
   position: absolute;
   text-align: center;
-  font-size: 24px;
-  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-family: Cambria;
   font-weight: bold;
   text-transform: uppercase;
   padding: 48px 0;
@@ -50,27 +50,27 @@
 }
 
 #nombre-label {
-  top: 130mm;
+  top: 135mm;
   left: 0;
 }
 #nombre-text {
-  top: 140mm;
-  left: 0;
-}
-#ci-label {
   top: 150mm;
   left: 0;
 }
+#ci-label {
+  top: 180mm;
+  left: 0;
+}
 #ci-text {
-  top: 160mm;
+  top: 195mm;
   left: 0;
 }
 #grupo-label {
-  top: 170mm;
+  top: 210mm;
   left: 0;
 }
 #grupo-text {
-  top: 180mm;
+  top: 225mm;
   left: 0;
 }
 </style>
@@ -91,7 +91,7 @@
     <img src="{{ public_path('img/fondo.png') }}" class="background">
     <img src="{{ storage_path('app/public/estudiantes/' . $estudiante->fotografia) }}" class="picture">
     <div class="label" id="nombre-label">NOMBRE:</div>
-    <div class="text" id="nombre-text">{{ $estudiante->nombre }}</div>
+    <div class="text" id="nombre-text">{{ $estudiante->nombre }} {{ $estudiante->apellido }}</div>
     <div class="label" id="ci-label">C.I:</div>
     <div class="text" id="ci-text">{{ $estudiante->cedula}}</div>
     <div class="label" id="grupo-label">GRUPO:</div>
