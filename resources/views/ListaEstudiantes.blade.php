@@ -173,9 +173,7 @@
                     <p class="card-text">GRUPO: {{ $estudiante['grupo'] }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="" title="EDITAR" target="_blank">
-                        <span class="glyphicon glyphicon-pencil-black"></span>
-                    </a>
+                    <a href="" title="EDITAR" target="_blank"></a>
                     <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
                 </div>
             </div>
