@@ -5,6 +5,7 @@ namespace Newton\Http\Controllers;
 use Newton\Estudiante;
 use Illuminate\Http\Request;
 use PDF;
+use Illuminate\Support\Facades\Storage;
 
 class EstudiantesController extends Controller
 {
@@ -107,8 +108,13 @@ class EstudiantesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $estudiante = Estudiante::find($id);
+        Storage::delete($estudiante->fotografia);
+        $estudiante->delete();
+        return redirect()->back();
     }
+
+    
 
     public function imprimirPdf($id)
     {

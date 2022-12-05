@@ -106,16 +106,16 @@
         <div class="col-lg-4 form-group">
             <label for="Apellidos"></label>
             <label >apellidos</label>
-            <input id="apellido" type="text" class="form-control" placeholder="Apellidos" name="apellido" value="">
+            <input id="apellido" type="text" class="form-control" placeholder="Apellidos" name="apellido" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();" >
         </div>
         <div class="col-lg-4 form-group">
         <label >nombres</label>
-        <input id="nombre" type="text" class="form-control" placeholder="Nombres" name="nombre" value="">
+        <input id="nombre" type="text" class="form-control" placeholder="Nombres" name="nombre" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
         </div>
 
         <div class="col-lg-4 form-group">
         <label >numero de carnet de identidad</label>
-        <input id="cedula" type="text" class="form-control" placeholder="cedula" name="cedula" value="">
+        <input id="cedula" type="text" class="form-control" placeholder="cedula" name="cedula" style="text-transform:uppercase;" value=""  onkeyup="javascript:this.value=this.value.toUpperCase();">
         </div>
 
 

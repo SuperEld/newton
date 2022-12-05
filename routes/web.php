@@ -18,5 +18,6 @@ Auth::routes();
 Route::get('/home', 'EstudiantesController@Listar')->name('home');
 Route::resource('estudiantes', 'EstudiantesController');
 Route::post('guardar-estudiante', 'EstudiantesController@guardar');
+Route::post('eliminarEstudiante/{id}', 'EstudiantesController@destroy');
 Route::get('ListaEstudiantes', 'EstudiantesController@Listar');
 Route::get('ImprimirEstudiante/{id}', 'EstudiantesController@imprimirPdf');

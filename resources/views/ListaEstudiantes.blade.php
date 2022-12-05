@@ -119,7 +119,10 @@
                 width: 100%;
             }
         }
-        
+        form.delete {
+        display: block;
+        float: right;
+        }
     </style>
 
 
@@ -160,7 +163,7 @@
 
 
 <div class="container">
-    <h1 class="titulo">LISTADO DE EQUIPOS DE MANTENIMIENTO </h1>
+    <h1 class="titulo">LISTADO ESTUDIANTES REGISTRADOS </h1>
     <div class="equipos">
         @foreach($estudiantes as $estudiante)
             <div class="card text-center">
@@ -173,7 +176,17 @@
                     <p class="card-text">GRUPO: {{ $estudiante['grupo'] }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="" title="EDITAR" target="_blank"></a>
+                <form action="{{ url('eliminarEstudiante/' . $estudiante['id']) }}"
+                                  onsubmit="return confirm('¿Esta seguro de eliminar el registro?')"
+                                  class="delete"
+                                  method="post">
+                                @csrf
+                                <input name="_method" type="hidden" value="">
+                                <a type="submit" class="btn btn-danger btn-sm"
+                                        title="Eliminar Estudiante">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>
+                    </form>
                     <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
                 </div>
             </div>
