@@ -163,7 +163,7 @@
 
 
 <div class="container">
-    <h1 class="titulo">LISTADO ESTUDIANTES REGISTRADOS </h1>
+    <h1 class="titulo">LISTADO ESTUDIANTES REGISTRADOS NEWTON</h1>
     <div class="equipos">
         @foreach($estudiantes as $estudiante)
             <div class="card text-center">
