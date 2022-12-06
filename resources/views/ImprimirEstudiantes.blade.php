@@ -17,16 +17,16 @@
 .credencial img.picture {
   position: absolute;
   top: 250px;
-  left: 60mm;
-  width: 350px;
-  height: 350px;
+  left: 50mm;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   z-index: 1;
 }
 
 .credencial img.dots {
   position: absolute;
-  top: 260mm;
+  top: 270mm;
   left: 63mm;
   width: 300px;
   z-index: 1;
@@ -49,33 +49,33 @@
 }
 
 #nombre-label {
-  top: 150mm;
+  top: 160mm;
   left: 0;
   font-size: 60px;
   font-family: Cambria;
 }
 #nombre-text {
-  top: 170mm;
+  top: 180mm;
   left: 0;
   font-size: 60px;
   font-family: Cambria;
 }
 #ci-label {
-  top: 190mm;
+  top: 200mm;
   left: -30mm;
 }
 #ci-text {
-  top: 190mm;
+  top: 200mm;
   left: 30;
 }
 #grupo-label {
-  top: 210mm;
+  top: 220mm;
   left: -40mm;
   font-size: 60px;
   font-family: Cambria;
 }
 #grupo-text {
-  top: 210mm;
+  top: 220mm;
   left: 30mm;
   font-size: 60px;
   font-family: Cambria;

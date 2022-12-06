@@ -163,7 +163,7 @@
 
 
 <div class="container">
-    <h1 class="titulo">LISTADO ESTUDIANTES REGISTRADOS NEWTON</h1>
+    <h1 class="titulo">LISTADO ESTUDIANTES REGISTRADOS </h1>
     <div class="equipos">
         @foreach($estudiantes as $estudiante)
             <div class="card text-center">
@@ -176,16 +176,16 @@
                     <p class="card-text">GRUPO: {{ $estudiante['grupo'] }}</p>
                 </div>
                 <div class="card-footer">
-                <form action="{{ url('eliminarEstudiante/' . $estudiante['id']) }}"
+                <form action=""
                                   onsubmit="return confirm('¿Esta seguro de eliminar el registro?')"
                                   class="delete"
                                   method="post">
                                 @csrf
-                                <input name="_method" type="hidden" value="">
-                                <a type="submit" class="btn btn-danger btn-sm"
-                                        title="Eliminar Estudiante">
+                                <input name="_method" type="hidden" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-sm"
+                                        title="Eliminar equipo">
                                     <span class="glyphicon glyphicon-trash"></span>
-                                </a>
+                                </button>
                     </form>
                     <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
                 </div>

@@ -114,7 +114,6 @@ class EstudiantesController extends Controller
         return redirect()->back();
     }
 
-    
 
     public function imprimirPdf($id)
     {
