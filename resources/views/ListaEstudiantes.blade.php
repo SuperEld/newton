@@ -92,8 +92,10 @@
         .card-footer a:hover {
             background-color: #037689;
         }
+
         .card-footer a span {
             text-align: center;
+            
         }
         .equipos {
             width: 100%;
@@ -175,20 +177,23 @@
                     <p class="card-text">C.I.: {{ $estudiante['cedula'] }}</p>
                     <p class="card-text">GRUPO: {{ $estudiante['grupo'] }}</p>
                 </div>
+
                 <div class="card-footer">
-                <form action=""
+                <a action=""
                                   onsubmit="return confirm('¿Esta seguro de eliminar el registro?')"
                                   class="delete"
                                   method="post">
                                 @csrf
                                 <input name="_method" type="hidden" value="DELETE">
-                                <button type="submit" class="btn btn-danger btn-sm"
-                                        title="Eliminar equipo">
-                                    <span class="glyphicon glyphicon-trash"></span>
+                                <button type="submit" class="glyphicon btn btn-primary btn-sm"
+                                        title="Eliminar Estudiante">
+                                    <span class="glyphicon btn btn-primary btn-sm"></span>
                                 </button>
-                    </form>
-                    <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
+                </a>
+                <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
+                <a href="{{url('ImprimirEstudiante/' . $estudiante['id'])}}" title="IMPRIMIR" class="glyphicon btn btn-primary btn-sm" target="_blank"></a>
                 </div>
+
             </div>
         @endforeach
 
